@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="emailApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Express Email</title>
+</head>
+<body>
+  <div ng-controller="EmailController">
+    {{test}}
+    <h1>Angular.JS + Email</h1>
+    <form ng-submit="submitForm()">
+      Email: <input type="email" ng-model="emailText" size="30" placeholder="test@example.com">
+      <input type="submit">
+    </form>
+
+    <hr/>
+    <div class="status"></div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="javascripts/script.js"></script>
+</body>
+</html>
