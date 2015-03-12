@@ -9,7 +9,9 @@ angular.module('emailApp', [])
 
       $http.post('/emails/send', {email: $scope.emailText})
         .success(function(data, status) {
-          $('.status').html('Email Sent to ' + $scope.emailText);
+          var email = $scope.emailText;
+          $('.status').html('Email Sent to ' + email);
+          $scope.emailText = '';
         })
         .error(function(data, status) {
           $('.status').html('Fail to send');
