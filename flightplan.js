@@ -29,8 +29,10 @@ plan.local(function(local) {
 
   local.log('Copy files to remote hosts');
   var filesToCopy = local.exec('git ls-files', {silent: true});
+  var distFiles = local.exec('find dist -print', {silent: true});
   // rsync files to all the target's remote hosts
   local.transfer(filesToCopy, '/tmp/' + tmpDir);
+  local.transfer(distFiles, '/tmp/' + tmpDir);
 });
 
 // run commands on the target's remote hosts
