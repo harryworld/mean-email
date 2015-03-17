@@ -3,7 +3,7 @@ angular.module('emailApp', [])
 
     $scope.submitForm = function() {
 
-      if ($scope.emailText == '' || $scope.emailText == undefined) {
+      if ($scope.emailText === '' || $scope.emailText === undefined) {
         return;
       }
 
@@ -17,6 +17,6 @@ angular.module('emailApp', [])
           $('.status').html('Fail to send');
         });
 
-    }
+    };
 
   }]);
